@@ -1,2 +1,4 @@
-# Your-task-is-to-build-a-text-editor-that-runs-in-the-browser
-JATE
+# User Story
+AS A developer
+I WANT to create notes or code snippets with or without an internet connection
+SO THAT I can reliably retrieve them for later use
