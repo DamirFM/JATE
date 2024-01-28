@@ -1,40 +1,39 @@
 # Thoughts
-[![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com)
-[![Insomnia](https://img.shields.io/badge/Insomnia-5849BE?style=for-the-badge&logo=insomnia&logoColor=white)](https://insomnia.rest/)
+
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://www.javascript.com)
 [![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en)
+[![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)](https://webpack.js.org/)
+[![IndexedDB](https://img.shields.io/badge/IndexedDB-brightgreen?style=for-the-badge&logo=indexeddb&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+[![Workbox](https://img.shields.io/badge/Workbox-4FC08D?style=for-the-badge&logo=google&logoColor=white)](https://developers.google.com/web/tools/workbox)
+[![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)](https://babeljs.io/)
+[![PWA](https://img.shields.io/badge/PWA-0056B3?style=for-the-badge&logo=google-chrome&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 
 ## Description
 
-Welcome to Thoughts, the backbone of a vibrant and dynamic social network web application. Our API, built on MongoDB and Express, empowers users to seamlessly share thoughts, engage with friends, and cultivate meaningful connections online.
+JATE is a simple text editor built using JavaScript. It allows users to create, edit, and save text content in a local IndexedDB database.
 
 ## Content ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) 
 
 - [Walkthrough](#Walkthrough)
 - [Features](#Features)
 - [Screenshots](#Screenshots)
-- [Installation](#Installation)
 - [Usage](#Usage)
-- [Endpoints](#Endpoints)
+- [Database](#Database)
 - [Contributing](#Contributing)
 - [Questions](#Questions)
 
-## Link of Walkthrough
+## Link of deployed application
 
-- https://drive.google.com/file/d/1TITkOI8x1UBCL1utXtt4USHu-IvN4Cv8/view?usp=sharing
+- https://jate-7y73.onrender.com 
 
 ## Features
 
-- View all thoughts;
-- View a single thought;
-- Create a new thought;
-- Update an existing thought;
-- Delete a thought and remove it from the user;
-- Add reactions to a thought;
-- Remove reactions from a thought;
-- Manage user accounts;
-- Add and remove friends.
+- Database Storage: JATE uses IndexedDB to store text content locally on the user's device.
+- Create and Edit: Users can create new text entries and edit existing ones.
+- Webpack Build: The app is bundled using Webpack for better code organization and performance.
+- Progressive Web App (PWA): JATE is designed as a PWA, ensuring a seamless experience for users, even in offline mode.
 
 ## Screenshots of application
 
@@ -46,42 +45,14 @@ Welcome to Thoughts, the backbone of a vibrant and dynamic social network web ap
 
 ![Alt text](./screenshots/4.png "Manifest")
 
-## Installation
-
-Follow these steps to set up the Candy Comment App on your local machine:
-
-1. Clone the repository;
-2. Install dependencies;
-3. Set up your database.
-
 ## Usage
 
-- API Usage:
-    Access the API at http://localhost:3001/api.
-    Use Insomnia interact with the API endpoints.
-- Web Application:
-    Open your web browser and navigate to http://localhost:3001.
-    Explore and use the web interface to interact with thoughts and user accounts.
+- Run the development server: npm run start
+- Open the app in your browser: http://localhost:3000
 
-## API Endpoints
+## Database
 
-### Thoughts:
-- GET /api/thoughts: Get all thoughts;
-- GET /api/thoughts/:thoughtId: Get a single thought;
-- POST /api/thoughts: Create a new thought;
-- PUT /api/thoughts/:thoughtId: Update a thought;
-- DELETE /api/thoughts/:thoughtId: Delete a thought and remove it from the user;
-- POST /api/thoughts/:thoughtId/reactions: Add a reaction to a thought;
-- DELETE /api/thoughts/:thoughtId/reactions/:reactionId: Remove a reaction from a thought.
-  
-### Users:
-- GET /api/users: Get all users;
-- GET /api/users/:userId: Get a single user;
-- POST /api/users: Create a new user;
-- PUT /api/users/:userId: Update a user;
-- DELETE /api/users/:userId: Delete a user and associated thoughts;
-- POST /api/users/:userId/friends/:friendId: Add a friend to a user;
-- DELETE /api/users/:userId/friends/:friendId: Remove a friend from a user.
+JATE uses IndexedDB for local storage. The database is initialized and upgraded using the idb library. The putDb method adds content to the database, while the getDb method retrieves content.
 
 ## Contributing
 
